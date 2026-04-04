@@ -1,6 +1,6 @@
 # Geometry Dash Web Runtime (Educational Project)
 
-This folder contains a browser-playable reconstruction of a Geometry Dash style runtime using Phaser.
+This folder contains a browser-playable reconstruction of the Geometry Dash https://www.geometrydash.com runtime using Phaser.
 
 The project loads level data from text files, draws gameplay from sprite atlases, supports official-style level selection, and plays per-level music.
 
