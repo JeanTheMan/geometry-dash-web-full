@@ -9099,12 +9099,7 @@ function ws(_0x13c75c, _0x23c5aa = 0xffffff, _0x52bb5b = 0xffffff) {
     }
   }).setScrollFactor(0x0).setDepth(0x39);
 }
-const HOSTNAME = window.location.hostname;
-const bs = [0x67, 0x65, 0x6f, 0x6d, 0x65, 0x74, 0x72, 0x79, 0x64, 0x61, 0x73, 0x68, 0x2e, 0x63, 0x6f, 0x6d].map(_0x1c1bb4 => String.fromCharCode(_0x1c1bb4)).join('');
-if (!(HOSTNAME === bs || HOSTNAME === "www." + bs || HOSTNAME.endsWith('.' + bs) || HOSTNAME === "localhost" || HOSTNAME === "127.0.0.1" || HOSTNAME === "::1" || HOSTNAME === "")) {
-  document.body.innerHTML = '';
-  throw new Error('');
-}
+
 const GAME_CONFIG = {
   type: Phaser.AUTO,
   width: r,
