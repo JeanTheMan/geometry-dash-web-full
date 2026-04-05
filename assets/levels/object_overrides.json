@@ -2,7 +2,7 @@
   "35": {
     "type": "pad",
     "frame": "bump_01_001.png",
-    "gridW": 1,
+    "gridW": 2,
     "gridH": 1,
     "padBoost": 34
   },
@@ -16,7 +16,7 @@
   "67": {
     "type": "pad",
     "frame": "bump_02_001.png",
-    "gridW": 1,
+    "gridW": 2,
     "gridH": 1,
     "padBoost": 28,
     "flipGravity": true
@@ -32,7 +32,7 @@
   "140": {
     "type": "pad",
     "frame": "bump_03_001.png",
-    "gridW": 1,
+    "gridW": 2,
     "gridH": 1,
     "padBoost": 42
   },

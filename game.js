@@ -6708,9 +6708,6 @@ class ps {
       return;
     }
     this.p.gravityFlipped = _0x53ab9f;
-    const _0x4144f4 = -this.p.yVelocity;
-    const _0x157248 = 8 * this.flipMod();
-    this.p.yVelocity = Math.abs(_0x4144f4) > Math.abs(_0x157248) ? _0x4144f4 : _0x157248;
     this.p.onGround = false;
     this.p.onCeiling = false;
     this.p.canJump = false;
@@ -7420,6 +7417,7 @@ class GameScene extends Phaser.Scene {
     this._bgSpeedY = 0.1;
     this._menuCameraX = -h;
     this._prevCameraX = -h;
+    this._prevCameraY = 0x0;
     const _0x1ee40a = this.game.registry.get("selectedBgKey") || "game_bg_01";
     const _0x4e47a8 = this.textures.exists(_0x1ee40a) ? _0x1ee40a : "game_bg_01";
     this._bg = this.add.tileSprite(0x0, 0x0, r, 0x280, _0x4e47a8).setOrigin(0x0, 0x0).setScrollFactor(0x0).setDepth(-0xa);
@@ -8187,6 +8185,7 @@ class GameScene extends Phaser.Scene {
     this._cameraY = 0x0;
     this._cameraXRef._v = this._cameraX;
     this._prevCameraX = this._cameraX;
+    this._prevCameraY = this._cameraY;
     const _0x22e36e = this._cameraX - (this._menuCameraX || 0x0);
     this._level.shiftGroundTiles(_0x22e36e);
     this._playerWorldX = this._cameraX;
@@ -8270,6 +8269,7 @@ class GameScene extends Phaser.Scene {
     this._cameraY = 0x0;
     this._cameraXRef._v = -h;
     this._prevCameraX = -h;
+    this._prevCameraY = 0x0;
     this._playerWorldX = 0x0;
     this._deltaBuffer = 0x0;
     this._deathTimer = 0x0;
@@ -8378,8 +8378,9 @@ class GameScene extends Phaser.Scene {
   }
   ['_updateBackground']() {
     this._bg.tilePositionX += (this._cameraX - this._prevCameraX) * this._bgSpeedX;
+    this._bg.tilePositionY += (this._cameraY - this._prevCameraY) * this._bgSpeedY;
     this._prevCameraX = this._cameraX;
-    this._bg.tilePositionY = this._bgInitY - this._cameraY * this._bgSpeedY;
+    this._prevCameraY = this._cameraY;
   }
   ["_drawBgShade"]() {
     if (!this._bgShade) {
